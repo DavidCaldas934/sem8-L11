@@ -16,10 +16,10 @@ POST {{server}}/cursos
 Content-Type: application/json
 
 {
-    "nombre":"Base de datos SQL1", "creditos": 9
+    "nombre":"Contabilidad y entornos aplicativos", "creditos": 8
 }
 ###
-DELETE {{server}}/cursos/104
+DELETE {{server}}/cursos/54
 ###
 PATCH {{server}}/cursos/102
 Content-Type: application/json
@@ -31,3 +31,28 @@ Content-Type: application/json
 GET {{server}}/profile/cursos
 ###
 GET {{server}}/cursos/search/findByNombre?nombre=Programacion2
+
+
+
+###
+GET {{server}}/carreras
+###
+POST {{server}}/carreras
+Content-Type: application/json
+
+{
+    "nombre":"Contabilidad"
+}
+###
+DELETE {{server}}/carreras/1
+###
+PATCH {{server}}/carreras/102
+Content-Type: application/json
+
+{
+    "nombre":"Base de datos SQL", "creditos": 19
+}
+###
+GET {{server}}/cursos/102/carreras
+###
+GET {{server}}/carreras/1/cursos
