@@ -1,0 +1,33 @@
+@server=https://davidcaldas934-shiny-xylophone-jxwww9p7qqwfpq7w-8080.preview.app.github.dev
+###
+GET {{server}}/
+###
+GET {{server}}/cursos
+###
+GET {{server}}/cursos/102
+###
+GET {{server}}/cursos?size=3&page=0
+###
+GET {{server}}/cursos?sort=nombre,asc
+###
+GET {{server}}/cursos?sort=creditos,desc
+###
+POST {{server}}/cursos
+Content-Type: application/json
+
+{
+    "nombre":"Base de datos SQL1", "creditos": 9
+}
+###
+DELETE {{server}}/cursos/104
+###
+PATCH {{server}}/cursos/102
+Content-Type: application/json
+
+{
+    "nombre":"Base de datos SQL", "creditos": 19
+}
+###
+GET {{server}}/profile/cursos
+###
+GET {{server}}/cursos/search/findByNombre?nombre=Programacion2

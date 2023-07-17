@@ -1,4 +1,5 @@
-@server=https://davidcaldas934-shiny-xylophone-jxwww9p7qqwfpq7w-8080.preview.app.github.dev
+#@server=https://davidcaldas934-shiny-xylophone-jxwww9p7qqwfpq7w-8080.preview.app.github.dev
+@server=https://sem8-5g8y.onrender.com
 @apiserver={{server}}/api/curso
 GET {{server}}/
 ###
@@ -9,12 +10,12 @@ GET {{server}}/nombre-completo
 POST {{apiserver}}/nuevo
 Content-Type: application/x-www-form-urlencoded
 
-nombre=Programacion&creditos=4
+nombre=Desarrollo de Aplicaciones Moviles&creditos=4
 ###
 DELETE  {{apiserver}}/eliminar
 Content-Type: application/x-www-form-urlencoded
 
-id=4
+id=3
 ###
 GET {{apiserver}}/listar
 ###
