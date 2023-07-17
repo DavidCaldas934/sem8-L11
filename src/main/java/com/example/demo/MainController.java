@@ -1,4 +1,5 @@
 package com.example.demo;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,19 +8,14 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-//import org.springframework.jdbc.core.JdbcTemplate;
 import java.lang.String;
 
-@Controller // This means that this class is a Controller
+@Controller
 @RequestMapping(path="/")
 public class MainController {
 
     @Autowired 
   private CursoRepository Repository;
-
-  //@Autowired
- // private JdbcTemplate jdbcTemplate;
-
 
   @GetMapping(path="/")
   public @ResponseBody String home(){
@@ -57,9 +53,7 @@ public class MainController {
     Curso n = new Curso();
     n.setId(id);
     Repository.delete(n);
-    return "Curso eliminado";
-    
+    return "Curso eliminado";    
   }
-
-    
+  
 }
