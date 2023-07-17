@@ -1,0 +1,20 @@
+@server=https://davidcaldas934-shiny-xylophone-jxwww9p7qqwfpq7w-8080.preview.app.github.dev
+@apiserver={{server}}/api/curso
+GET {{server}}/
+###
+GET {{server}}/codigo
+###
+GET {{server}}/nombre-completo
+###
+POST {{apiserver}}/nuevo
+Content-Type: application/x-www-form-urlencoded
+
+nombre=Programacion&creditos=4
+###
+DELETE  {{apiserver}}/eliminar
+Content-Type: application/x-www-form-urlencoded
+
+id=4
+###
+GET {{apiserver}}/listar
+###
